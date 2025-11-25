@@ -734,8 +734,8 @@ export function Session() {
         showTimestamps,
       }}
     >
-      <box flexDirection="row" paddingBottom={1} paddingTop={1} paddingLeft={2} paddingRight={2} gap={2}>
-        <box flexGrow={1} gap={1}>
+      <box flexDirection="row">
+        <box flexGrow={1} paddingBottom={1} paddingTop={1} paddingLeft={2} paddingRight={2}>
           <Show when={session()}>
             <Show when={session().parentID}>
               <box
@@ -873,7 +873,7 @@ export function Session() {
                 )}
               </For>
             </scrollbox>
-            <box flexShrink={0}>
+            <box flexShrink={0} paddingTop={1}>
               <Prompt
                 ref={(r) => (prompt = r)}
                 disabled={permissions().length > 0}
